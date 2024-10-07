@@ -4,7 +4,7 @@ import cv2                   # Import OpenCV library
 import math                  # Import math module for mathematical operations
 
 # Start webcam
-cap = cv2.VideoCapture(1)    # Open default camera (index 0)
+cap = cv2.VideoCapture(1)    # Open default camera (index 1 for secondary webcam)
 cap.set(3, 640)               # Set frame width to 640 pixels
 cap.set(4, 480)               # Set frame height to 480 pixels
 
@@ -62,7 +62,7 @@ while True:
             cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
 
     # Display the frame with detected objects in a window named "Webcam"
-    cv2.imshow('Cam', img)
+    cv2.imshow('WEBCAM STREAM', img)
 
     # Check for the 'q' key press to exit the loop
     if cv2.waitKey(1) == ord('q'):
